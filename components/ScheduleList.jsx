@@ -12,9 +12,8 @@ export class ScheduleList extends React.Component {
             <FlatList
                 data={this.props.schedules}
                 keyExtractor={item => item.id}
-                renderItem={({ item }) => <ScheduleItem data={item} key={item.id} />}
-                style={{width: '100%'}
-    }/>
+                renderItem={({ item }) => <ScheduleItem data={item}/>}
+                style={{width: '100%'}}/>
         );
     }
 }

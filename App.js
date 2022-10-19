@@ -1,7 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 import { ScheduleScreen } from './screen/ScheduleScreen';
-import { NativeBaseProvider, Center } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { HomeScreen } from './screen/HomeScreen';
@@ -74,20 +72,20 @@ export default function App() {
       <NativeBaseProvider>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Schedule" component={ScheduleScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{ title: '', headerStyle: { backgroundColor: '#84cc16' }, headerShadowVisible: false }} />
+            <Stack.Screen name="Schedule" component={ScheduleScreen} options={
+              { title: 'Hiling.id', 
+              headerStyle: { backgroundColor: '#84cc16' }, 
+              headerShadowVisible: false,
+              headerTitleStyle: {
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: 30,
+              },
+              headerTitleAlign: 'center' }} />
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>
     </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
