@@ -7,66 +7,6 @@ import { HomeScreen } from './screen/HomeScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  var data = [{
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  }, {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },
-  {
-    bandara_keberangkatan: "CGK",
-    bandara_tujuan: "PLM",
-    maskapai: "Tiger Water",
-    tanggal: "2023-12-10 12:30 WIB",
-  },];
-
   return (
     <NativeBaseProvider>
       <NativeBaseProvider>

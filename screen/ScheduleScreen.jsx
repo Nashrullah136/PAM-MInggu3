@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import { ScheduleList } from '../components/ScheduleList';
-import { Center, Container, Box, Text } from 'native-base'
+import { Center, Container, Box, Text, Flex, Spacer } from 'native-base'
 
 export class ScheduleScreen extends React.Component {
     schedules = [
@@ -78,19 +78,25 @@ export class ScheduleScreen extends React.Component {
 
     render() {
         return (
-            <Box w='full'>
-                <Box w='100%' bg='lime.500' mb={5}>
-                    <Text alignSelf={'center'} fontSize='xl' color='white'>Hasil Pencarian Penerbangan</Text>
-                    <Text alignSelf={'center'} fontSize='xl' color='white' mb='4    '>
-                        {this.props.route.params.data.jadwal}
-                    </Text>
+            <Flex h='full'>
+                <Box w='full'>
+                    <Box w='100%' bg='lime.500' mb={5}>
+                        <Text alignSelf={'center'} fontSize='xl' color='white'>Hasil Pencarian Penerbangan</Text>
+                        <Text alignSelf={'center'} fontSize='xl' color='white' mb='4    '>
+                            {this.props.route.params.data.jadwal}
+                        </Text>
+                    </Box>
+                    <Center w='full'>
+                        <Container w='full'>
+                            <ScheduleList schedules={this.state.detailSchedule} />
+                        </Container>
+                    </Center>
                 </Box>
-                <Center w='full'>
-                    <Container w='full'>
-                        <ScheduleList schedules={this.state.detailSchedule} />
-                    </Container>
-                </Center>
-            </Box>
+                <Spacer />
+                <Box w='100%' mb={5}>
+                    <Text alignSelf={'center'} fontSize='xl' color='gray.400'>Copyright M.Nashrullah-118140136</Text>
+                </Box>
+            </Flex>
         );
     }
 }
